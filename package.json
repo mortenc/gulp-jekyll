@@ -1,0 +1,27 @@
+{
+  "name": "gulp-jekyll",
+  "version": "0.0.1",
+  "description": "My boilerplate workflow for using Gulp and Jekyll to easily build static sites.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Morten Christoffersen",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mortenc/gulp-jekyll"
+  },
+  "devDependencies": {
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-cssnano": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-util": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/mortenc/gulp-jekyll/issues"
+  },
+  "homepage": "https://github.com/mortenc/gulp-jekyll"
+}
