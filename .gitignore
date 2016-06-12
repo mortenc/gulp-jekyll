@@ -1,3 +1,14 @@
+#Ignore Jekyll output files
 _site
-.sass-cache
 .jekyll-metadata
+
+#Ignore files related to Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+#Ignore NPM and gulp related folders
+.sass-cache
+/node_modules/
+
+# Ignore SASS source maps
+*.css.map
