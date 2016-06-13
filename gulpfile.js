@@ -89,6 +89,7 @@ gulp.task('scripts', function () {
 });
 
 /**
+ * $ gulp browser-sync
  * Start a BrowserSync server
  */
 gulp.task('browser-sync', function() {
@@ -100,6 +101,7 @@ gulp.task('browser-sync', function() {
 });
 
 /**
+ * $ gulp jekyll
  * Build Jekyll Site with an incremental build
  */
 gulp.task('jekyll', function (done) {
@@ -109,6 +111,7 @@ gulp.task('jekyll', function (done) {
 });
 
 /**
+ * $ gulp serve
  * Serve site, watch for changes and run tasks as needed
  */
 gulp.task('serve', ['sass', 'scripts', 'jekyll', 'browser-sync'], function () {
