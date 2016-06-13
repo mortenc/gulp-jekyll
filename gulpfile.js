@@ -1,5 +1,6 @@
 var gulp            = require('gulp'),
     browserSync     = require('browser-sync'),
+    childprocess    = require('child_process'),
     cssnano         = require('gulp-cssnano'), //Contains autoprefixer
     gutil           = require('gulp-util'),
     sass            = require('gulp-sass'),
@@ -57,8 +58,19 @@ gulp.task('browser-sync', function() {
 });
 
 /**
+ * Build Jekyll Site with an incremental build
+ */
+gulp.task('jekyll', function (done) {
+    browserSync.notify('Building Jekyll site...');
+    return childprocess.spawn('jekyll', ['build', '--incremental'], {stdio: 'inherit'})
+    .on('close', done);
+});
+
+/**
  * Serve site, watch for changes and run tasks as needed
  */
-gulp.task('serve', ['sass', 'browser-sync'], function () {
+gulp.task('serve', ['sass', 'jekyll', 'browser-sync'], function () {
     gulp.watch(src.scss, ['sass']);
+    gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '*.md', '_posts/*'], ['jekyll']);
+    gulp.watch(['_site/**/*.html']).on('change', browserSync.reload);
 });
