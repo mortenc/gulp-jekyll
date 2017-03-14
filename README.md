@@ -13,34 +13,39 @@ So you got the prerequisites installed, and you're ready to get started? Great! 
 
 1. Clone the project and navigate to the project folder.
 
-2. Install all the required packages with Node Package Manager:  
-    
+2. Install all the required packages with Node Package Manager:
+
     ```
     $ npm install
-    ``` 
-3. Use these commands:  
-    
+    ```
+3. Use these commands:
+
     ```
     $ gulp sass (--production)
     ```
-    Compile and minify sass files + generate generate sourceemaps + place compiled css in both '/assets/' and '_site/assets/' for reloading. Passing `--production` flag disables sourcemaps.  
+    Compile and minify sass files + generate generate sourceemaps + place compiled css in both '/assets/' and '_site/assets/' for reloading. Passing `--production` flag disables sourcemaps.
 
     ```
     $ gulp scripts (--production)
     ```
-    Lint, concat and uglify scripts and place file into both '/assets/' and '_site/assets/' for reloading. Passing `--production` flag disables sourcemaps.  
+    Lint, concat and uglify scripts and place file into both '/assets/' and '_site/assets/' for reloading. Passing `--production` flag disables sourcemaps.
 
     ```
     $ gulp browser-sync
     ```
-    Start a BrowserSync server and automatically launch browser tab.  
+    Start a BrowserSync server and automatically launch browser tab.
 
     ```
     $ gulp jekyll
     ```
-    Build Jekyll Site with an incremental build.  
+    Build Jekyll Site with an incremental build.
 
     ```
     $ gulp serve
     ```
     Serve site, watch for changes and run tasks as needed.
+
+    ```
+    $ gulp build --production
+    ```
+    Builds the site, sass and scripts for production. Remember to set --production flag.
